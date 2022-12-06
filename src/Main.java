@@ -25,12 +25,12 @@ public class Main {
         */
         int minExpense = expenses[0];
         int maxExpense = expenses[0];
-        for (int i = 0; i < expenses.length - 1; i++) {
-            if (minExpense > expenses[i + 1]) {
-                minExpense = expenses[i + 1];
+        for (int i = 1; i < expenses.length - 1; i++) {
+            if (minExpense > expenses[i]) {
+                minExpense = expenses[i];
             }
-            if (maxExpense < expenses[i + 1]) {
-                maxExpense = expenses[i + 1];
+            if (maxExpense < expenses[i]) {
+                maxExpense = expenses[i];
             }
         }
         System.out.println("\nExercise 2");
@@ -164,7 +164,7 @@ public class Main {
 
     public static int[] generateRandomArray() {
         java.util.Random random = new java.util.Random();
-        int[] arr = new int[30];
+        int[] arr = new int[5];
         for (int i = 0; i < arr.length; i++) {
             arr[i] = random.nextInt(100_000) + 100_000;
         }
